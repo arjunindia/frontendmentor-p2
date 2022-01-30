@@ -1,37 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
 
-  Order Summary
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        display: grid;
+        height: 100vh;
+        place-items: center;
+        background: url("./images/pattern-background-desktop.svg") no-repeat;
+        background-color: hsl(225, 100%, 94%);
+        background-size: 100vw 40%;
+        color: hsl(224, 23%, 55%);
+      }
+      .card {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        max-width: 500px;
+        background-color: white;
+        border-radius: 30px;
+      }
+      .card > img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px 30px 0 0;
+      }
+      h2 {
+        font-weight: 900;
+        font-size: 2rem;
+      }
+      h2,
+      h3 {
+        color: hsl(223, 47%, 23%);
+      }
+      p {
+        font-size: 1rem;
+      }
+      a {
+        color: hsl(245, 75%, 52%);
+        font-weight: 700;
+      }
+      a:active {
+        text-decoration: none;
+        opacity: 0.5;
+        color: hsl(245, 75%, 52%);
+      }
+      .content {
+        /* width: 65%; */
+        padding: 1rem;
+      }
+      .content > p {
+        margin: 3vh 0%;
+        width: 60%;
+        transform: translateX(35%);
+      }
+      .pricebox {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: hsl(225, 100%, 98%);
+        border-radius: 10px;
+        width: 80%;
+        transform: translateX(12.5%);
+      }
+      .pb-c {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+      }
+      .pb-c > h3 {
+        margin: 0;
+      }
+      .pprice > h3 {
+        margin: 0;
+        padding: 0;
+      }
+      .pprice {
+        margin: 1vh 1vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .pprice > p {
+        margin: 1vh 0;
+      }
+      button {
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 80%;
+        /* transform: translateX(-11%); */
+        padding: 2vh 0;
+        border: none;
+        background: none;
+        color: hsl(224, 23%, 55%);
+        cursor: pointer;
+      }
+      button:active {
+        color: hsl(223, 47%, 23%);
+      }
+      .bb:active {
+        color: white;
+        opacity: 0.8;
+      }
+      .bb {
+        background-color: hsl(245, 75%, 52%);
+        color: white;
+        margin-top: 2vh;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(56, 41, 224, 0.4);
+      }
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .attribution {
+        position: absolute;
+        bottom: 5px;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="./images/illustration-hero.svg" alt="" />
+      <div class="content">
+        <h2>Order Summary</h2>
+        <p>
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="bs">
+          <div class="pricebox">
+            <div class="pb-c">
+              <img src="./images/icon-music.svg" alt="" />
+              <div class="pprice">
+                <h3>Annual Plan</h3>
+                <p>
+                  <span class="price">$59.99</span>
+                  <span class="period">/year</span>
+                </p>
+              </div>
+            </div>
+            <a href="#">Change</a>
+          </div>
+          <button class="bb">Proceed to payment</button>
+          <button>Cancel Order</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
